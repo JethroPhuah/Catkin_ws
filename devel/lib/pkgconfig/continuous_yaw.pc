@@ -1,0 +1,1 @@
+/home/jethro/catkin_ws/devel/.private/continuous_yaw/lib/pkgconfig/continuous_yaw.pc

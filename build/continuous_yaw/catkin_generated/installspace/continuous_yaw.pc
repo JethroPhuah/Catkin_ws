@@ -1,0 +1,8 @@
+prefix=/home/jethro/catkin_ws/install
+
+Name: continuous_yaw
+Description: Description of continuous_yaw
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

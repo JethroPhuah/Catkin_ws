@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target continuous_yaw[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/continuous_yaw.dir/src/continuous_yaw.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/jethro/catkin_ws/devel/.private/continuous_yaw/lib/continuous_yaw/continuous_yaw[0m
+[100%] Built target continuous_yaw

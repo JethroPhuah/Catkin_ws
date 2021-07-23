@@ -1,0 +1,22 @@
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:40:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kmavros_msgs[m[K’ in namespace ‘[01m[Kgeometry_msgs[m[K’ does not name a type
+ [01;31m[Kmavros_msgs[m[K::State current_state;
+ [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:[m[K In function ‘[01m[Kvoid state_cb(const ConstPtr&)[m[K’:
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:82:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+     [01;31m[Kcurrent_state[m[K = *msg;
+     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:82:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcurrent_pos[m[K’
+     [01;36m[Kcurrent_state[m[K = *msg;
+     [01;36m[K^~~~~~~~~~~~~[m[K
+     [32m[Kcurrent_pos[m[K
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:312:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+     while(ros::ok() && ![01;31m[Kcurrent_state[m[K.connected){
+                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:312:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcurrent_pos[m[K’
+     while(ros::ok() && ![01;36m[Kcurrent_state[m[K.connected){
+                         [01;36m[K^~~~~~~~~~~~~[m[K
+                         [32m[Kcurrent_pos[m[K
+make[2]: *** [CMakeFiles/continuous_yaw.dir/src/continuous_yaw.cpp.o] Error 1
+make[1]: *** [CMakeFiles/continuous_yaw.dir/all] Error 2
+make: *** [all] Error 2

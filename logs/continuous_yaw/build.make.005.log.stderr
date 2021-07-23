@@ -1,0 +1,18 @@
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:[m[K In function ‘[01m[Kvoid current_pos_cb(const ConstPtr&)[m[K’:
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:39:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_model_order[m[K’ was not declared in this scope
+     [01;31m[Kget_model_order[m[K();
+     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:39:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktotalorder[m[K’
+     [01;36m[Kget_model_order[m[K();
+     [01;36m[K^~~~~~~~~~~~~~~[m[K
+     [32m[Ktotalorder[m[K
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:101:21:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kros::Subscriber current_pos_sub[m[K’
+     ros::Subscriber [01;31m[Kcurrent_pos_sub[m[K = nh.subscribe<gazebo_msgs::ModelStates>
+                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:98:21:[m[K [01;36m[Knote: [m[K‘[01m[Kros::Subscriber current_pos_sub[m[K’ previously declared here
+     ros::Subscriber [01;36m[Kcurrent_pos_sub[m[K = nh.subscribe<gazebo_msgs::ModelStates>
+                     [01;36m[K^~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/continuous_yaw.dir/src/continuous_yaw.cpp.o] Error 1
+make[1]: *** [CMakeFiles/continuous_yaw.dir/all] Error 2
+make: *** [all] Error 2

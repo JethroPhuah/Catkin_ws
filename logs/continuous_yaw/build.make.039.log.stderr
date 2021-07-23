@@ -1,0 +1,10 @@
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:[m[K In function ‘[01m[Kvoid CalcAngle(gazebo_msgs::ModelStates)[m[K’:
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:144:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>=[m[K’ token
+         if (diff_t_x <[01;31m[K>=[m[K> 0 && diff_t_y < 0){
+                       [01;31m[K^~[m[K
+[01m[K/home/jethro/catkin_ws/src/continuous_yaw/src/continuous_yaw.cpp:144:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+         if (diff_t_x <>=[01;31m[K>[m[K 0 && diff_t_y < 0){
+                         [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/continuous_yaw.dir/src/continuous_yaw.cpp.o] Error 1
+make[1]: *** [CMakeFiles/continuous_yaw.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,90 @@
+Traceback (most recent call last):
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+    from future import standard_library
+ImportError: Traceback (most recent call last):
+No module named future  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+    from future import standard_library
+ImportError: No module named future
+Traceback (most recent call last):
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+    from future import standard_library
+ImportErrorTraceback (most recent call last):
+:   File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+No module named future
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+    from future import standard_library
+ImportError: No module named future
+Traceback (most recent call last):
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+    Traceback (most recent call last):
+from pymavlink.generator import mavgen
+Traceback (most recent call last):
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+    from pymavlink.generator import mavgen
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+        from future import standard_library
+    from future import standard_library
+from future import standard_library
+ImportErrorImportError: ImportError: No module named future: No module named future
+No module named future
+
+Traceback (most recent call last):
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+    from future import standard_library
+ImportError: No module named future
+Traceback (most recent call last):
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+    from future import standard_library
+ImportError: No module named future
+Traceback (most recent call last):
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+make[2]: *** [paparazzi-v2.0-cxx-stamp] Error 1
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+    from future import standard_library
+ImportError: No module named future
+make[1]: *** [CMakeFiles/paparazzi.xml-v2.0.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [icarous-v2.0-cxx-stamp] Error 1
+make[2]: *** [include/v1.0/ASLUAV/ASLUAV.h] Error 1
+make[1]: *** [CMakeFiles/icarous.xml-v2.0.dir/all] Error 2
+make[1]: *** [CMakeFiles/ASLUAV.xml-v1.0.dir/all] Error 2
+make[2]: *** [include/v1.0/autoquad/autoquad.h] Error 1
+make[2]: *** [ualberta-v2.0-cxx-stamp] Error 1
+make[2]: *** [include/v1.0/icarous/icarous.h] Error 1
+make[1]: *** [CMakeFiles/autoquad.xml-v1.0.dir/all] Error 2
+make[1]: *** [CMakeFiles/ualberta.xml-v2.0.dir/all] Error 2
+make[1]: *** [CMakeFiles/icarous.xml-v1.0.dir/all] Error 2
+make[2]: *** [matrixpilot-v2.0-cxx-stamp] Error 1
+Traceback (most recent call last):
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/tools/mavgen.py", line 16, in <module>
+make[2]: *** [include/v1.0/ardupilotmega/ardupilotmega.h] Error 1
+    from pymavlink.generator import mavgen
+  File "/home/jethro/catkin_ws/src/mavlink/pymavlink/generator/mavgen.py", line 26, in <module>
+make[1]: *** [CMakeFiles/matrixpilot.xml-v2.0.dir/all] Error 2
+    from future import standard_library
+ImportError: No module named future
+make[1]: *** [CMakeFiles/ardupilotmega.xml-v1.0.dir/all] Error 2
+make[2]: *** [standard-v2.0-cxx-stamp] Error 1
+make[1]: *** [CMakeFiles/standard.xml-v2.0.dir/all] Error 2
+make[2]: *** [include/v1.0/common/common.h] Error 1
+make[1]: *** [CMakeFiles/common.xml-v1.0.dir/all] Error 2
+make[2]: *** [include/v1.0/matrixpilot/matrixpilot.h] Error 1
+make[1]: *** [CMakeFiles/matrixpilot.xml-v1.0.dir/all] Error 2
+make: *** [all] Error 2
