@@ -40,7 +40,6 @@ rosrun continuous_yaw continuous_yaw
 
 6. Change vehicle 1 in QGC to offboard mode
 
-![offboard](images/changeToOffboard.png)
 
 
 
