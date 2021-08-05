@@ -35,6 +35,8 @@ source devel/setup.bash
 5. Run the code (Change file name in accordingly if required)
 ```
 rosrun continuous_yaw continuous_yaw 
+
+Side note: continuous_yaw_before_editing is a file that contains my draft work before cleaning up. It can be found in Catkin_ws/src/continuous_yaw
 ```
 **Always remember to run steps 2-3 if you made any edits t/home/jethro/PX4/PX4-Autopilot/src/modules/flight_mode_manager/tasks/Orbit/FlightTaskOrbit.cppo the code**
 
