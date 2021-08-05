@@ -51,10 +51,12 @@ Slide right at the bottom after you are done.
 
 2. To change the orbit radius via code, go to PX4/PX4-Autopilot/src/modules/flight_mode_manager/tasks/Orbit/FlightTaskOrbit.cpp.
 ![Screenshot from 2021-08-05 06-15-58](https://user-images.githubusercontent.com/62226668/128333856-98466c0b-6fdb-47bf-b7d2-b46015520857.png)
+
 As seen above, change the radius to your desired value. 
 
 3. To change the speed and direction via code, go to the same file. 
 ![Screenshot from 2021-08-05 06-17-29](https://user-images.githubusercontent.com/62226668/128334056-43915509-910c-461e-a722-1d0508de9b46.png)
+
 Comment out the some lines of the code as seen above. The value 2f can be changed accordinly to your desired value. Do note however that it is limited to a maximum velocity that the drone can reached at certain orbiting radius.
 
 4. Rerun ./px4.sh to compile the codes.
