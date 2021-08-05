@@ -38,7 +38,9 @@ rosrun continuous_yaw continuous_yaw
 ```
 **Always remember to run steps 2-3 if you made any edits t/home/jethro/PX4/PX4-Autopilot/src/modules/flight_mode_manager/tasks/Orbit/FlightTaskOrbit.cppo the code**
 
-6. Change vehicle 1 in QGC to offboard mode
+6. Change vehicle 1 in QGC to offboard mode as seen below. 
+![Screenshot from 2021-08-05 06-20-10](https://user-images.githubusercontent.com/62226668/128334442-2b159029-0031-46c1-a314-f35d3c8bda4f.png)
+
 
 ## Testing of code
 ---
