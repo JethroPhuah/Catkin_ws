@@ -186,47 +186,6 @@ void CalcFollowingParam(gazebo_msgs::ModelStates current_pos)
     // when CV model is implemented. Error_yaw will be calculated with the center of the video as the fixed point and the distance btw the target drone to the center of the image will be the error.
     error_yaw = acos((pow(dist_travelled_by_veh2, 2) - pow(prev_distance_btw, 2) - pow(cur_distance_btw, 2))/((-2)*prev_distance_btw*cur_distance_btw));
 
-    // if (curr_yaw >= 0 && curr_yaw < pi/2){
-    //     ROS_INFO("First Quadrant");
-    //     if (diff_t_x >= 0 || diff_t_y < 0 && diff_t_x >= 0){
-    //     // if((diff_t_x >= 0 && diff_t_y < 0) || diff_t_y < 0){
-    //         error_yaw = -error_yaw;
-    //         ROS_INFO("First Quadrant clockwise");
-    //     }
-        
-    // }
-
-    // else if (curr_yaw >= pi/2 && curr_yaw < pi){
-    //     ROS_INFO("Second Quadrant");
-    //     //if (diff_t_x >= 0 || diff_t_y < 0){ //if (diff_t_x >= 0 || diff_t_y >= 0){
-    //     if (diff_t_x >= 0){
-    //         error_yaw = -error_yaw;
-    //         ROS_INFO("Second Quadrant clockwise");
-    //     }
-        
-    // }
-
-    // else if (curr_yaw >= -pi && curr_yaw < -pi/2){
-    //     ROS_INFO("Third Quadrant");
-    //     //if (diff_t_x < 0 || diff_t_y >= 0){
-    //     if (diff_t_y >= 0){
-    //         error_yaw = -error_yaw;
-    //         ROS_INFO("Third Quadrant clockwise");
-    //     }
-        
-    // }
-
-    // else {
-    //     ROS_INFO("Fourth Quadrant");
-    //     //if (diff_t_x < 0 || (diff_t_y < 0){
-    //     if (diff_t_x < 0 && diff_t_x_prev < 0){
-    //         error_yaw = -error_yaw;
-    //         ROS_INFO("Fourth Quadrant clockwise");
-    //     }
-        
-    // }
-    // ROS_INFO("diff_t_x: %f diff_t_y: %f", diff_t_x, diff_t_y);
-
 }
 
 void get_model_order(){
@@ -301,43 +260,20 @@ void yaw_control()
     if (angle_to_yaw > degree_of_error){
         yaw.linear.x = 0;
         yaw.angular.z = catchup_yawRate;
-        // raw.velocity.x = 0;
-        // raw.yaw = catchup_yawRate;
-        // raw.position.z = 40;
         ROS_INFO("Catch up + catch up");
     }
     else if (angle_to_yaw < -degree_of_error){
         yaw.linear.x = 0;
         yaw.angular.z = -catchup_yawRate;
-        // raw.velocity.x = 0;
-        // raw.yaw = -catchup_yawRate;
-        // raw.position.z = 40;
         ROS_INFO("Catch up - catch up");
     }
     else{
-        // yaw.linear.x = linear_velocity;
-        //yaw.linear.z = 0;
         yaw.angular.z = error_yaw;
-        // ROS_INFO("Fixed Altitude: %f", fixed_cur_z);
-        // ROS_INFO("Current Altitude: %f", f_curr_z);
-        // if (f_curr_z != fixed_cur_z)
-        // {
-        //     error_prev_z = fixed_cur_z - f_prev_z;
-        //     error_curr_z = fixed_cur_z-f_curr_z;
-        //     error_derivative_z = (error_curr_z - error_prev_z)/2;
-        //     yaw.linear.z = error_curr_z + error_derivative_z;
-        //     ROS_INFO("Distance to cover in z axis is: %f", error_curr_z + error_derivative_z);
-        // }
-        // raw.yaw = error_yaw;
-        // raw.velocity.x = linear_velocity;
-        // raw.position.z = 40;
-        // ROS_INFO("Distance to cover is: %f", linear_velocity);
         ROS_INFO("Angle required to yaw: %f", error_yaw);
         ROS_INFO("Not Catch up");
     }
     
     local_yaw_pub.publish(yaw);
-    // local_raw_pub.publish(raw);
 }
 
 void yaw_control_pid()
@@ -347,8 +283,6 @@ void yaw_control_pid()
     
     // Realise Integrator is not needed as we do not need an output to maintain the yaw (or like height or temperature)
     // Needs the derivative to ensure smooth slowing down.
-    // integrator = (error_yaw * 1) + integrator;
-    // ROS_INFO("Integrator yaw: %f", integrator);
 
     derivative = (error_yaw - error_yaw_prev)/1;
     ROS_INFO("Derivative Yaw: %f", derivative);
@@ -361,7 +295,6 @@ void yaw_control_pid()
             ROS_INFO("First Quadrant");
             if (diff_t_x >= 0 || diff_t_y < 0){
                 clockwise = true;
-                //output = -output;
                 ROS_INFO("First Quadrant clockwise");
             }
             else 
@@ -371,8 +304,7 @@ void yaw_control_pid()
 
         else if (curr_yaw >= pi/2 && curr_yaw < pi){
             ROS_INFO("Second Quadrant");
-            if (diff_t_x >= 0 || diff_t_y >= 0){ //if (diff_t_x >= 0 || diff_t_y < 0){
-                //output = -output;
+            if (diff_t_x >= 0 || diff_t_y >= 0){ 
                 clockwise = true;
                 ROS_INFO("Second Quadrant clockwise");
             }
@@ -384,7 +316,6 @@ void yaw_control_pid()
         else if (curr_yaw >= -pi && curr_yaw < -pi/2){
             ROS_INFO("Third Quadrant");
             if (diff_t_x < 0 || diff_t_y >= 0){
-                //output = -output;
                 clockwise = true;
                 ROS_INFO("Third Quadrant clockwise");
             }
@@ -396,8 +327,6 @@ void yaw_control_pid()
         else {
             ROS_INFO("Fourth Quadrant");
             if (diff_t_x < 0){
-            // if (diff_t_x < 0 || diff_t_y < 0){
-                //output = -output;
                 clockwise = true;
                 ROS_INFO("Fourth Quadrant clockwise");
             }
@@ -522,39 +451,21 @@ int main(int argc, char **argv)
     arm_cmd.request.value = true;
 
     int count = 0;
-    //mavros_msgs::PositionTarget::IGNORE_YAW|
     
     while(ros::ok()){
         if(count == 0){
             ROS_INFO("Continuous Yaw Starting...");
             count++;
         }
-        // raw.coordinate_frame = mavros_msgs::PositionTarget::FRAME_BODY_NED;
-        // raw.type_mask = 3043;
-        // raw.header.frame_id = "base_link";
-        // raw.type_mask = mavros_msgs::PositionTarget::IGNORE_VX |
-        //             //mavros_msgs::PositionTarget::IGNORE_VY |
-        //             mavros_msgs::PositionTarget::IGNORE_PZ|
-        //             mavros_msgs::PositionTarget::IGNORE_YAW;
-
-        // raw.header.stamp = ros::Time::now();
         prev_secs = cur_secs;
         cur_secs = ros::Time::now().toSec();
         double time_taken = cur_secs - prev_secs;
         ROS_INFO("Time taken: %f", time_taken);
-
-        //Testing
-        // raw.yaw = 1.5708;
-        // raw.velocity.x = 10;
-        // raw.position.z = 30;
-        // ROS_INFO("Testing");
-        // local_raw_pub.publish(raw);
+        
         yaw_control_pid();
-        // yaw_control();
 
         ros::spinOnce();
         ros::Duration(1.0).sleep(); // Sleep for a second
-        //rate.sleep();
     }
 
     return 0;
